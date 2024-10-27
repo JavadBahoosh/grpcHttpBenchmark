@@ -1,0 +1,15 @@
+# Python virtual environment
+.venv/
+
+# Proto generated files
+greet_pb2.py
+greet_pb2_grpc.py
+
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+.idea/

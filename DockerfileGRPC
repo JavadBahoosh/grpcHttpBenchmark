@@ -1,0 +1,10 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY grpc_server.py greet.proto /app/
+
+RUN pip install grpcio grpcio-tools
+RUN python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. greet.proto
+
+EXPOSE 50051
+CMD ["python", "grpc_server.py"]

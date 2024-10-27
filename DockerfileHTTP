@@ -1,0 +1,9 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY http_server.py /app
+
+RUN pip install Flask flask-cors
+
+EXPOSE 50050
+CMD ["python", "http_server.py"]
