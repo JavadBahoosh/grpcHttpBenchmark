@@ -49,7 +49,7 @@ This will generate the `greet_pb2.py` and `greet_pb2_grpc.py` files in the proje
 Use Docker Compose to start the HTTP and gRPC servers:
 
 ```bash
-docker-compose up --build
+docker compose up --build
 ```
 
 The HTTP server will be available at `http://127.0.0.1:50050`, and the gRPC server will listen on `127.0.0.1:50051`.
@@ -68,7 +68,7 @@ The script will output the results for the HTTP and gRPC servers, including requ
 
 ### Dockerfile for HTTP and gRPC Servers
 
-Both servers have Dockerfiles (`Dockerfile.http` and `Dockerfile.grpc`), and Docker Compose configuration is in `docker-compose.yml`. Ensure that Docker is running before starting the benchmark.
+Both servers have Dockerfiles (`DockerfileHTTP` and `DockerfileGRPC`), and Docker Compose configuration is in `docker-compose.yml`. Ensure that Docker is running before starting the benchmark.
 
 ## Example Results
 
