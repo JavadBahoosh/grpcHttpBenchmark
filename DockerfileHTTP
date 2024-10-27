@@ -3,7 +3,7 @@ FROM python:3.11-slim
 WORKDIR /app
 COPY http_server.py /app
 
-RUN pip install Flask flask-cors
+RUN pip install Flask flask-cors gunicorn
 
 EXPOSE 50050
-CMD ["python", "http_server.py"]
+CMD ["gunicorn", "http_server:app", "--bind", "0.0.0.0:50050", "--workers", "10"]
